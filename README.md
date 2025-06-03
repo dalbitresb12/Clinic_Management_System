@@ -12,9 +12,11 @@ This project is a **Software Requirements Specification (SRS)** for a **Clinic M
 - **Billing and Payment System**
 - **Role-Based Access Control for Patients, Doctors, and Admins**
 
-  ## 🧑‍🤝‍🧑 Collaboration
+## 🧑‍🤝‍🧑 Collaboration
 
 This project was collaboratively built by our team members:
+
+- [Nusrat Jaben Aurnima](https://github.com/NushratJabenAurnima)
 - [Zihad Khan](https://github.com/Zihad107)
 - [Shairin Akter Hashi](https://github.com/Shairin207)
 - [MD Shahrukh Hossain Shihab](https://github.com/shihab372)
