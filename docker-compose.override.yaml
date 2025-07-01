@@ -1,0 +1,10 @@
+services:
+  app:
+    image: ghcr.io/dalbitresb12/clinic_management_system:dev
+    build:
+      target: base
+    volumes:
+      - ./CM:/var/www/html
+  db:
+    ports:
+      - "3306:3306"

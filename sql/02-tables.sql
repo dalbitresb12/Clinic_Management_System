@@ -1,3 +1,5 @@
+USE clinic_db;
+
 -- admin_details
 CREATE TABLE admin_details (
     admin_id INT PRIMARY KEY AUTO_INCREMENT,

@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "clinic_db";
+$servername = getenv('MYSQL_HOST') ?: "localhost";
+$username = getenv('MYSQL_USER') ?: "root";
+$password = getenv('MYSQL_PASSWORD') ?: "";
+$dbname = getenv('MYSQL_DATABASE') ?: "clinic_db";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

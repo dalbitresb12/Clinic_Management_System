@@ -1,0 +1,44 @@
+networks:
+  db-net:
+
+volumes:
+  db-data:
+
+services:
+  app:
+    image: ghcr.io/dalbitresb12/clinic_management_system:latest
+    build:
+      context: ./CM
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    environment:
+      MYSQL_HOST: db.internal
+      MYSQL_USER: root
+      MYSQL_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+    networks:
+      db-net:
+        aliases:
+          - app.internal
+  db:
+    image: mysql:8
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
+      start_period: 10s
+      start_interval: 5s
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    expose:
+      - 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+    volumes:
+      - db-data:/var/lib/mysql:rw
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    networks:
+      db-net:
+        aliases:
+          - db.internal

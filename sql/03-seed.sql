@@ -1,3 +1,5 @@
+USE clinic_db;
+
 -- Insert values to admin
 INSERT INTO admin_details (admin_name, admin_email, admin_password) VALUES ('srk', 'srk@gmail.com', '1234');
 
@@ -10,11 +12,11 @@ INSERT INTO doctor_details (doctor_name, doctor_email, specialist, doctor_passwo
 ('Hashi', 'hashi@gmail.com', 'Dermatologist', '1234');
 
 -- Types of Doctors
-Cardiologist
-Surgeon
-Dermatologist
-Pediatrician
-General Physician
+-- Cardiologist
+-- Surgeon
+-- Dermatologist
+-- Pediatrician
+-- General Physician
 
 -- Insert values to patients
 INSERT INTO patient_details (patient_name, patient_gender, patient_age, patient_email, patient_password, patient_address, medical_history) VALUES
@@ -26,5 +28,5 @@ INSERT INTO patient_details (patient_name, patient_gender, patient_age, patient_
 ('Rob', 'Male', 40, 'rob@gmail.com', '1234', 'acd street', 'Heart condition'),
 ('Jay', 'Male', 29, 'jay@gmail.com', '1234', 'brac street', 'No medical issues');
 
---Patient Report table must be inserted manually. Patient ids must be the ones that have doctors inserted. Bellow is a generalized report
-Maintain a balanced lifestyle by prioritizing physical health, mental well-being, and social connections. Eat a nutritious diet while staying hydrated. Engage in regular physical activity, aiming for at least 30 minutes of moderate exercise most days. 
+-- Patient Report table must be inserted manually. Patient ids must be the ones that have doctors inserted. Bellow is a generalized report
+-- Maintain a balanced lifestyle by prioritizing physical health, mental well-being, and social connections. Eat a nutritious diet while staying hydrated. Engage in regular physical activity, aiming for at least 30 minutes of moderate exercise most days. 
